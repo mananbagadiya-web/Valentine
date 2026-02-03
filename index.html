@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Be My Valentine 💘</title>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: pink;
+        font-family: 'Comic Sans MS', cursive;
+        overflow: hidden;
+    }
+
+    .box {
+        text-align: center;
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+        color: #ff4d6d;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 18px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        margin: 10px;
+    }
+
+    #yes {
+        background: #ff4d6d;
+        color: white;
+    }
+
+    #no {
+        background: #ccc;
+        position: absolute;
+    }
+</style>
+</head>
+
+<body>
+<div class="box">
+    <h1>Will you be my Valentine? 💖</h1>
+    <button id="yes" onclick="yes()">Yes 💕</button>
+    <button id="no" onmouseover="move()">No 😢</button>
+</div>
+
+<script>
+function yes() {
+    document.body.innerHTML = "<h1 style='color:red;'>Yayyy!! ❤️ I Love You 💘</h1>";
+}
+
+function move() {
+    let x = Math.random() * (window.innerWidth - 100);
+    let y = Math.random() * (window.innerHeight - 50);
+    document.getElementById("no").style.left = x + "px";
+    document.getElementById("no").style.top = y + "px";
+}
+</script>
+</body>
+</html>
